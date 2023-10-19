@@ -14,6 +14,6 @@ logging.basicConfig(
     level= logging.INFO
 )
 
-## For tersting purpose.--> RUN in Terminal--> python src/logger.py
-#if __name__ == "__main__":
-    #logging.info("Logging has Started")
+# #For tersting purpose.--> RUN in Terminal--> python src/logger.py
+# if __name__ == "__main__":
+#     logging.info("Logging has Started")

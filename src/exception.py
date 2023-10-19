@@ -1,5 +1,5 @@
 import sys
-import logging
+from src.logger import logging
 
 def erorr_message_details(error,error_detail:sys):
     _,_,exc_tb = error_detail.exc_info()  #info about exception- like which file, line number all those details will be stored in exc_tb
@@ -8,7 +8,7 @@ def erorr_message_details(error,error_detail:sys):
 
     return error_message
 
-class Coustom_Exception(Exception):
+class CoustomException(Exception):
     def __init__(self,error_message,error_detail:sys):
         super().__init__(error_message)
         self.error_message = erorr_message_details(error_message,error_detail=error_detail)
@@ -17,11 +17,11 @@ class Coustom_Exception(Exception):
         return self.error_message
     
 
-#if __name__ == "__main__":
-    #try:
-        #a = 1/0
+# if __name__ == "__main__":
+#     try:
+#         a = 1/0
     
-    #except Exception as e:
-        #logging.info("Divide by Zero Error")
-        #raise Coustom_Exception(e,sys)
+#     except Exception as e:
+#         logging.info("Divide by Zero Error")
+#         raise CoustomException(e,sys)
     
