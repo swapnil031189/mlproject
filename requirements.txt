@@ -1,4 +1,12 @@
 pandas
 numpy
 seaborn
--e .
+matplotlib
+scikit-learn
+setuptools >= 64.0
+wheel
+jupyterlab
+conan (>=1.57, <=1.59)
+# catboost
+xgboost
+# -e . #Dont build package again and again. Uncomment this at last
