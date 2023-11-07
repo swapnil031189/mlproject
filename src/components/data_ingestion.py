@@ -1,6 +1,6 @@
 import os
 import sys
-from src.exception import CoustomException
+from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
 
@@ -19,7 +19,7 @@ class DataIngestion:
         self.ingestion_config= DataIngestionConfig()
 
     def initiate_data_ingestion(self):
-        loggong.info("Enter the data ingestion method or component")
+        logging.info("Enter the data ingestion method or component")
         try:
             df = pd.read_csv('notebook/data/stud.csv')
             logging.info('Read the dataset as dataframe')
@@ -43,8 +43,8 @@ class DataIngestion:
                 
             )
         except Exception as e:
-            raise CoustomException(e,sys)
+            raise CustomException(e,sys)
         
 if __name__ == "__main__":
-    obj = DataIngestion
+    obj = DataIngestion()
     obj.initiate_data_ingestion()
