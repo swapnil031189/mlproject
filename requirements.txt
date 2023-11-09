@@ -8,5 +8,6 @@ wheel
 jupyterlab
 conan (>=1.57, <=1.59)
 # catboost
-xgboost
+# 
+dill
 # -e . #Dont build package again and again. Uncomment this at last
